@@ -4,7 +4,8 @@
       <h1 class="font-bold text-5xl mb-4">GameUsedJersey</h1>
       <div class="flex gap-4 text-lg">
         <NuxtLink to="/">Home</NuxtLink>
-        <NuxtLink to="/event">Event</NuxtLink>
+        <NuxtLink to="/event/event-1">Event 1</NuxtLink>
+        <NuxtLink to="/event/event-2">Event 2</NuxtLink>
       </div>
     </header>
     <div class="py-6 px-48">
