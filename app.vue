@@ -4,6 +4,7 @@
       <h1 class="font-bold text-5xl mb-4">TODO</h1>
       <div class="flex gap-4 text-lg">
         <NuxtLink to="/">Home</NuxtLink>
+        <NuxtLink to="/about-us">About us</NuxtLink>
       </div>
     </header>
     <div class="py-6 px-48">
