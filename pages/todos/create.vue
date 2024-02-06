@@ -1,15 +1,8 @@
 <script setup lang="ts">
-import { useMutation } from '@tanstack/vue-query';
-
-const { mutateAsync } = useMutation({
-    mutationFn: async (newTodo: string) => {
-        await addNewTodo(newTodo);
-    },
-});
-
 const title = ref("");
 const onSubmit = () => {
-    mutateAsync(title.value);
+    console.log(title.value);
+    // to-implement
     title.value = "";
 };
 </script>
