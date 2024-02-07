@@ -17,11 +17,13 @@ export const getTodos = async (searchTerm?: string) => {
 
     await sleep(500);
 
+    const clonedTodos = [...todos];
+
     if (!searchTerm) {
-        return todos;
+        return clonedTodos;
     }
 
-    return todos.filter((todo) => todo.title.toLowerCase().includes(searchTerm.toLowerCase()));
+    return clonedTodos.filter((todo) => todo.title.toLowerCase().includes(searchTerm.toLowerCase()));
 };
 
 export const getTodoById = async (id: string) => {
@@ -32,7 +34,7 @@ export const getTodoById = async (id: string) => {
     return todos.find((todo) => todo.id === id);
 }
 
-export const addNewTodo = async (title: string) => {
+export const createTodo = async (title: string) => {
     console.log("...adding todo", title);
 
     await sleep(500);
