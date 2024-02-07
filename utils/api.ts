@@ -26,14 +26,6 @@ export const getTodos = async (searchTerm?: string) => {
     return clonedTodos.filter((todo) => todo.title.toLowerCase().includes(searchTerm.toLowerCase()));
 };
 
-export const getTodoById = async (id: string) => {
-    console.log("...getting todo", id);
-
-    await sleep(500);
-
-    return todos.find((todo) => todo.id === id);
-}
-
 export const createTodo = async (title: string) => {
     console.log("...adding todo", title);
 
