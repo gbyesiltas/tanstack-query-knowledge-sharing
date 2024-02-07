@@ -11,12 +11,17 @@ let todos: Todo[] = [{
     title: "Call an ambulance (not for me)",
 }];
 
-export const getTodos = async () => {
+
+export const getTodos = async (searchTerm?: string) => {
     console.log("...getting todos");
 
     await sleep(500);
 
-    return todos;
+    if (!searchTerm) {
+        return todos;
+    }
+
+    return todos.filter((todo) => todo.title.toLowerCase().includes(searchTerm.toLowerCase()));
 };
 
 export const getTodoById = async (id: string) => {
