@@ -12,10 +12,10 @@ let todos: Todo[] = [{
 }];
 
 
-export const getTodos = async (searchTerm?: string) => {
+export const getTodos = async (searchTerm: string) => {
     console.log("...getting todos");
 
-    await sleep(500);
+    await sleep(3000);
 
     const clonedTodos = [...todos];
 

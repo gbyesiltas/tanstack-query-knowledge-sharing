@@ -1,10 +1,17 @@
 <script setup lang="ts">
+import { useCreateTodoMutation } from '~/queries/todos';
+
 const title = ref("");
-const onSubmit = () => {
-    console.log(title.value);
-    // to-implement
-    title.value = "";
-};
+
+const { mutateAsync } = useCreateTodoMutation();
+const onSubmit = async () => {
+    try {
+        await mutateAsync(title.value);
+        title.value = "";
+    } catch(e) {
+        console.log("e", e);
+    }
+}
 </script>
 <template>
     <div>

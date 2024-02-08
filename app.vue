@@ -5,6 +5,7 @@
       <div class="flex gap-4 text-lg">
         <NuxtLink to="/">Home</NuxtLink>
         <NuxtLink to="/about-us">About us</NuxtLink>
+        <NuxtLink to="/todos/create">Create</NuxtLink>
       </div>
     </header>
     <div class="py-6 px-48">
